@@ -1,0 +1,182 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+}
+
+header{
+background:#0b3d91;
+color:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:34px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+padding:60px 8%;
+background:#ffffff;
+}
+
+.left{
+max-width:500px;
+}
+
+.left h1{
+font-size:48px;
+color:#0b3d91;
+margin-bottom:15px;
+}
+
+.left h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.left p{
+font-size:22px;
+color:#666;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+margin-bottom:40px;
+}
+
+.right img{
+width:100%;
+max-width:520px;
+margin-top:20px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.services{
+padding:60px 8%;
+text-align:center;
+}
+
+.services h2{
+font-size:36px;
+margin-bottom:35px;
+color:#0b3d91;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card i{
+font-size:45px;
+color:#0b3d91;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:22px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero{
+text-align:center;
+}
+
+.left h1{
+font-size:34px;
+}
+
+.left h2{
+font-size:26px;
+}
+
+}
+html{
+scroll-behavior:smooth;
+}
+.floating-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+box-shadow:0 6px 15px rgba(0,0,0,.3);
+z-index:999;
+}
+
+.floating-whatsapp:hover{
+transform:scale(1.1);
+transition:.3s;
+}
+.offer-badge{
+display:inline-block;
+background:#ff9800;
+color:#fff;
+padding:10px 18px;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:20px;
+font-size:18px;
+}
