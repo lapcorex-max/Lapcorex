@@ -180,3 +180,43 @@ font-weight:bold;
 margin-bottom:20px;
 font-size:18px;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.services,
+#gallery {
+  animation: fadeIn 1s ease;
+}
+.right img {
+  transition: transform 0.4s ease;
+}
+
+.right img:hover {
+  transform: scale(1.03);
+  }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.btn {
+  animation: pulse 2s infinite;
+}
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
