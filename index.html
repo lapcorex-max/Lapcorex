@@ -17,6 +17,10 @@
 <link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/...">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 </head>
 <body>
@@ -43,7 +47,7 @@ LAPCOREX
 
 </header>
 
-<section class="hero" id="home">
+<section class="hero" id="home" data-aos="fade-up">
 
 <div class="left">
 <div class="offer-badge">🔥 Lowest Price Guaranteed</div>
@@ -67,14 +71,14 @@ WhatsApp Now
 
 <div class="right">
 
-<img src="lapcorex-banner.png" alt="Lapcorex Banner" style="width:100%; border-radius:15px;">
+<img src="lapcorex-banner.png" alt="Lapcorex Banner" data-aos="zoom-in">
 
 </div>
 
 </section>
 
 <section class="services" id="services">
-  <section id="brands" class="services">
+  <section id="brands" class="services" data-aos="fade-right">
 
 <h2>Brands We Support</h2>
 
@@ -90,14 +94,14 @@ WhatsApp Now
 </div>
 
 </section>
-<section id="gallery" class="services">
+<section id="gallery" class="services" data-aos="fade-left">
 
 <h2>Gallery</h2>
 
 <img src="laptop.png" width="100%">
 
 </section>
-<section id="contact" class="services">
+<section id="contact" class="services" data-aos="fade-up">
 
 <h2>Contact Us</h2>
 
@@ -171,5 +175,12 @@ WhatsApp
 <a href="https://wa.me/917994699123" class="floating-whatsapp">
     <i class="fab fa-whatsapp"></i>
 </a>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
 </body>
 </html>
