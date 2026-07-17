@@ -220,9 +220,13 @@ font-size:18px;
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+.logo {
+    text-align: center;
+    overflow: hidden;
+}
+
 .logo img {
-    width: 280px;
+    width: 180px;
+    max-width: 90%;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
