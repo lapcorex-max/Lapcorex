@@ -203,3 +203,35 @@ font-size:24px;
 font-size:18px;
 }
   }
+.menu-btn{
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+}
+
+@media (max-width:768px){
+
+.menu-btn{
+    display:block;
+}
+
+nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#0b3d91;
+    padding:20px;
+}
+
+nav.active{
+    display:flex;
+}
+
+nav a{
+    margin:10px 0;
+}
+}
