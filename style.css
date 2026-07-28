@@ -1678,3 +1678,63 @@ img{
     margin:0;
     font-size:16px;
 }
+/* WHY CHOOSE LAPCOREX */
+
+.why-section{
+    padding:80px 8%;
+    background:linear-gradient(180deg,#041425,#061d35);
+    text-align:center;
+}
+
+.why-section h2{
+    font-size:42px;
+    color:#00a8ff;
+    text-shadow:0 0 15px rgba(0,168,255,.5);
+}
+
+.why-line{
+    width:90px;
+    height:5px;
+    margin:15px auto 45px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#00a8ff,#39ff14);
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.why-card{
+    background:rgba(8,30,58,.95);
+    border:1px solid #00a8ff;
+    border-radius:20px;
+    padding:35px 25px;
+    transition:.35s;
+    box-shadow:0 0 20px rgba(0,168,255,.15);
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    border-color:#39ff14;
+    box-shadow:0 0 30px rgba(57,255,20,.25);
+}
+
+.why-card i{
+    font-size:50px;
+    color:#00a8ff;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    color:#39ff14;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.why-card p{
+    color:#dce8f8;
+    line-height:1.7;
+    font-size:16px;
+}
