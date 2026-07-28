@@ -1075,3 +1075,206 @@ nav a:hover::after {
         transform: none;
     }
 }
+/* ===== LAPCOREX FINAL GLOSSY OVERRIDE ===== */
+
+body{
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0,168,255,.12), transparent 30%),
+        radial-gradient(circle at 85% 60%, rgba(140,255,0,.08), transparent 30%),
+        linear-gradient(135deg,#01040a,#031126 50%,#010611) !important;
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(180deg,#061a35,#020817) !important;
+    border-bottom:2px solid #00a8ff;
+    box-shadow:
+        0 3px 15px rgba(0,168,255,.45),
+        0 0 35px rgba(0,168,255,.15) !important;
+}
+
+.logo{
+    color:#fff !important;
+    text-shadow:
+        0 0 8px #00a8ff,
+        0 0 20px rgba(0,168,255,.8);
+}
+
+/* HERO */
+.hero{
+    background:
+        radial-gradient(circle at 75% 40%,rgba(0,168,255,.20),transparent 35%),
+        radial-gradient(circle at 30% 70%,rgba(140,255,0,.08),transparent 30%),
+        linear-gradient(135deg,#020817,#061b38,#020817) !important;
+}
+
+/* ALL MAIN SECTIONS */
+.brands-section,
+.stock-section,
+.services,
+#services,
+#brands,
+#stock,
+#gallery,
+#contact{
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,168,255,.08),transparent 30%),
+        radial-gradient(circle at 80% 80%,rgba(140,255,0,.05),transparent 30%),
+        linear-gradient(135deg,#031126,#020817) !important;
+}
+
+/* HEADINGS */
+.brands-section h2,
+.stock-section h2,
+.services h2{
+    color:#fff !important;
+    text-shadow:
+        0 0 8px #00a8ff,
+        0 0 22px rgba(0,168,255,.55);
+}
+
+/* BRAND CARDS */
+.brand-card{
+    background:
+        linear-gradient(145deg,
+        rgba(12,39,70,.96),
+        rgba(2,10,24,.98)) !important;
+
+    border:1px solid rgba(0,229,255,.65) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        inset 0 0 25px rgba(0,168,255,.06),
+        0 12px 30px rgba(0,0,0,.55),
+        0 0 12px rgba(0,168,255,.20) !important;
+}
+
+.brand-card:hover{
+    border-color:#8cff00 !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.18),
+        0 0 12px #00a8ff,
+        0 0 30px rgba(0,168,255,.45),
+        0 0 45px rgba(140,255,0,.20) !important;
+
+    transform:translateY(-8px) scale(1.02);
+}
+
+.brand-card h3{
+    color:#00b7ff !important;
+}
+
+.brand-card:hover h3{
+    color:#9cff00 !important;
+}
+
+/* LAPTOP PRODUCT CARDS */
+.laptop-card{
+    background:
+        linear-gradient(145deg,#09213d,#020916) !important;
+
+    border:1px solid rgba(0,168,255,.7) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        0 15px 35px rgba(0,0,0,.55),
+        0 0 15px rgba(0,168,255,.18) !important;
+}
+
+.laptop-card:hover{
+    border-color:#8cff00 !important;
+
+    box-shadow:
+        0 0 12px #00a8ff,
+        0 0 28px rgba(0,168,255,.45),
+        0 0 40px rgba(140,255,0,.15) !important;
+}
+
+.laptop-info h3{
+    color:#00b7ff !important;
+}
+
+.laptop-info p{
+    color:#dcecff !important;
+}
+
+.laptop-price{
+    color:#9cff00 !important;
+    text-shadow:0 0 12px rgba(156,255,0,.55);
+}
+
+/* GREEN BUTTONS */
+.btn,
+.stock-whatsapp{
+    background:
+        linear-gradient(180deg,#b4ff27,#64d900) !important;
+
+    color:#031008 !important;
+
+    border:1px solid #a6ff00 !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.6),
+        0 0 10px rgba(140,255,0,.65),
+        0 0 25px rgba(140,255,0,.25) !important;
+}
+
+.btn:hover,
+.stock-whatsapp:hover{
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.8),
+        0 0 15px #8cff00,
+        0 0 35px rgba(140,255,0,.55) !important;
+}
+
+/* SERVICE CARDS */
+.card{
+    background:
+        linear-gradient(145deg,#09213d,#020916) !important;
+
+    color:#fff;
+
+    border:1px solid rgba(0,168,255,.55);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.5),
+        0 0 12px rgba(0,168,255,.15) !important;
+}
+
+.card i{
+    color:#00b7ff !important;
+    text-shadow:0 0 15px rgba(0,183,255,.6);
+}
+
+.card:hover{
+    border-color:#8cff00;
+
+    box-shadow:
+        0 0 15px rgba(0,168,255,.65),
+        0 0 30px rgba(140,255,0,.15) !important;
+}
+
+/* IMAGE GLOSS */
+.brand-card img,
+.laptop-card img{
+    filter:
+        drop-shadow(0 12px 15px rgba(0,0,0,.55))
+        drop-shadow(0 0 6px rgba(0,168,255,.18));
+}
+
+/* NAV */
+nav a:hover{
+    color:#9cff00 !important;
+    text-shadow:0 0 10px #8cff00;
+}
+
+/* MOBILE MENU */
+@media(max-width:768px){
+    nav{
+        background:
+            linear-gradient(180deg,#061a35,#020817) !important;
+        border-bottom:1px solid #00a8ff;
+    }
+}
