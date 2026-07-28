@@ -662,3 +662,416 @@ nav a{
     }
 
 }
+/* =========================================
+   LAPCOREX NEON / GLOSSY THEME
+   ========================================= */
+
+:root {
+    --dark: #020817;
+    --dark2: #06152d;
+    --blue: #00a8ff;
+    --cyan: #00e5ff;
+    --green: #8cff00;
+    --green2: #39ff14;
+    --text: #ffffff;
+    --muted: #b8c6d9;
+}
+
+/* PAGE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0,168,255,.12), transparent 30%),
+        radial-gradient(circle at 80% 60%, rgba(140,255,0,.08), transparent 30%),
+        linear-gradient(135deg, #020817, #06152d 55%, #010611);
+    color: var(--text);
+}
+
+/* HEADER */
+
+header {
+    background: rgba(2, 8, 23, .94) !important;
+    border-bottom: 1px solid rgba(0,229,255,.7);
+    box-shadow:
+        0 0 10px rgba(0,168,255,.4),
+        0 0 28px rgba(0,168,255,.18);
+    backdrop-filter: blur(12px);
+}
+
+header h1,
+.logo {
+    color: var(--blue) !important;
+    text-shadow:
+        0 0 8px rgba(0,168,255,.8),
+        0 0 20px rgba(0,168,255,.35);
+}
+
+/* NAVIGATION */
+
+nav a {
+    color: #fff !important;
+    position: relative;
+    transition: .3s ease;
+}
+
+nav a:hover {
+    color: var(--green) !important;
+    text-shadow: 0 0 10px rgba(140,255,0,.8);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--green);
+    box-shadow: 0 0 10px var(--green);
+
+    transform: translateX(-50%);
+    transition: .3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 65% 45%, rgba(0,168,255,.17), transparent 32%),
+        radial-gradient(circle at 80% 60%, rgba(140,255,0,.10), transparent 25%),
+        linear-gradient(120deg, #020817, #06152d 60%, #010611) !important;
+
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -120px;
+
+    background: var(--blue);
+    opacity: .08;
+    filter: blur(90px);
+    border-radius: 50%;
+}
+
+.hero h1,
+.hero h2 {
+    color: white;
+    text-shadow: 0 0 20px rgba(0,168,255,.2);
+}
+
+.hero h1 span,
+.hero h2 span {
+    color: var(--green);
+    text-shadow: 0 0 18px rgba(140,255,0,.45);
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+/* HERO IMAGE */
+
+.hero img {
+    filter:
+        drop-shadow(0 15px 25px rgba(0,0,0,.5))
+        drop-shadow(0 0 12px rgba(0,168,255,.18));
+
+    transition: .4s ease;
+}
+
+.hero img:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* BUTTONS */
+
+.btn,
+.hero a,
+.stock-whatsapp {
+    border-radius: 10px !important;
+    transition: .3s ease !important;
+}
+
+.btn,
+.stock-whatsapp {
+    background: linear-gradient(135deg, #62d900, #9cff00) !important;
+    color: #04120a !important;
+
+    box-shadow:
+        0 0 8px rgba(140,255,0,.6),
+        0 0 25px rgba(140,255,0,.25);
+
+    border: 1px solid var(--green) !important;
+}
+
+.btn:hover,
+.stock-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 12px rgba(140,255,0,.9),
+        0 0 35px rgba(140,255,0,.45);
+}
+
+/* =========================================
+   BRANDS
+   ========================================= */
+
+.brands-section,
+#brands {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(0,168,255,.12), transparent 40%),
+        linear-gradient(180deg, #031126, #020817) !important;
+
+    color: white;
+}
+
+.brands-section h2,
+#brands h2 {
+    color: #fff !important;
+    font-size: 38px;
+
+    text-shadow:
+        0 0 10px rgba(0,168,255,.6),
+        0 0 25px rgba(0,168,255,.25);
+}
+
+.brand-line {
+    background: linear-gradient(90deg, var(--blue), var(--cyan), var(--green));
+    box-shadow: 0 0 12px var(--cyan);
+}
+
+/* BRAND CARDS */
+
+.brand-card,
+.brand-item {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,30,58,.96),
+            rgba(2,10,24,.98)
+        ) !important;
+
+    border: 1px solid rgba(0,200,255,.75);
+
+    box-shadow:
+        inset 0 0 20px rgba(0,168,255,.05),
+        0 0 8px rgba(0,168,255,.25),
+        0 10px 30px rgba(0,0,0,.45) !important;
+
+    color: white;
+    overflow: hidden;
+}
+
+/* glossy shine */
+
+.brand-card::before,
+.brand-item::before {
+    content: "";
+    position: absolute;
+
+    top: -80%;
+    left: -80%;
+
+    width: 70%;
+    height: 250%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.13),
+        transparent
+    );
+
+    transform: rotate(25deg);
+    transition: .7s;
+}
+
+.brand-card:hover::before,
+.brand-item:hover::before {
+    left: 130%;
+}
+
+.brand-card:hover,
+.brand-item:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 10px rgba(0,168,255,.8),
+        0 0 25px rgba(0,168,255,.35),
+        0 0 35px rgba(140,255,0,.18) !important;
+}
+
+.brand-card img,
+.brand-item img {
+    filter: drop-shadow(0 12px 12px rgba(0,0,0,.5));
+}
+
+.brand-card h3,
+.brand-item h3 {
+    color: var(--blue) !important;
+    text-shadow: 0 0 10px rgba(0,168,255,.45);
+}
+
+.brand-card:hover h3,
+.brand-item:hover h3 {
+    color: var(--green) !important;
+    text-shadow: 0 0 12px rgba(140,255,0,.65);
+}
+
+/* =========================================
+   AVAILABLE LAPTOPS
+   ========================================= */
+
+.stock-section,
+#stock {
+    background:
+        radial-gradient(circle at 10% 50%, rgba(0,168,255,.10), transparent 25%),
+        radial-gradient(circle at 90% 50%, rgba(140,255,0,.07), transparent 25%),
+        #020817 !important;
+
+    color: white;
+}
+
+.stock-section h2,
+#stock h2 {
+    color: white !important;
+
+    text-shadow:
+        0 0 10px rgba(0,168,255,.55);
+}
+
+.stock-subtitle {
+    color: var(--muted) !important;
+}
+
+/* LAPTOP CARDS */
+
+.laptop-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,30,58,.97),
+            rgba(2,9,22,.98)
+        ) !important;
+
+    color: white !important;
+
+    border: 1px solid rgba(0,168,255,.65);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.5),
+        0 0 10px rgba(0,168,255,.15);
+
+    transition: .35s ease;
+}
+
+.laptop-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 12px rgba(0,168,255,.7),
+        0 0 30px rgba(0,168,255,.25),
+        0 0 20px rgba(140,255,0,.15);
+}
+
+.laptop-card h3 {
+    color: var(--blue) !important;
+}
+
+.laptop-card p {
+    color: #d7e5f5 !important;
+}
+
+.laptop-price {
+    color: var(--green) !important;
+    text-shadow: 0 0 10px rgba(140,255,0,.35);
+}
+
+/* BADGE */
+
+.stock-badge {
+    background: linear-gradient(135deg, #73e600, #b1ff25) !important;
+    color: #031008 !important;
+
+    box-shadow:
+        0 0 10px rgba(140,255,0,.6);
+}
+
+/* =========================================
+   SERVICES / GALLERY / OTHER SECTIONS
+   ========================================= */
+
+.services,
+#services,
+#gallery {
+    background: #031126 !important;
+    color: white !important;
+}
+
+.services h2,
+#services h2,
+#gallery h2 {
+    color: var(--blue) !important;
+    text-shadow: 0 0 12px rgba(0,168,255,.35);
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp {
+    background: #25d366 !important;
+
+    border: 3px solid rgba(140,255,0,.9);
+
+    box-shadow:
+        0 0 10px #25d366,
+        0 0 25px rgba(37,211,102,.7),
+        0 0 45px rgba(140,255,0,.35) !important;
+}
+
+/* SELECTION */
+
+::selection {
+    background: var(--green);
+    color: #020817;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .brands-section h2,
+    #brands h2 {
+        font-size: 30px;
+    }
+
+    .brand-card:hover,
+    .brand-item:hover,
+    .laptop-card:hover {
+        transform: none;
+    }
+}
