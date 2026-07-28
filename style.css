@@ -1561,3 +1561,33 @@ img {
     }
 
 }
+/* MOBILE OVERFLOW FIX */
+
+html,
+body{
+    overflow-x:hidden !important;
+    width:100%;
+}
+
+*{
+    max-width:100%;
+}
+
+.hero,
+header,
+.services,
+.stock-section,
+.brands-section{
+    width:100%;
+    overflow:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.floating-whatsapp{
+    right:15px !important;
+    bottom:15px !important;
+}
