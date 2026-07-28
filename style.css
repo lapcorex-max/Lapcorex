@@ -300,3 +300,7 @@ nav a{
         opacity: 0;
     }
 }
+.floating-whatsapp {
+    outline: 4px solid #25D366 !important;
+    outline-offset: 8px !important;
+}
