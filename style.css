@@ -236,17 +236,15 @@ nav a{
 }
 }
 .floating-whatsapp {
-    animation: whatsappPulse 1.5s infinite;
+    animation: whatsappPulse 0.8s ease-in-out infinite !important;
+    transform-origin: center !important;
 }
 
 @keyframes whatsappPulse {
-    0% {
+    0%, 100% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.15);
-    }
-    100% {
-        transform: scale(1);
+        transform: scale(1.5);
     }
 }
