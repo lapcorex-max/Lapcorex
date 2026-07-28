@@ -279,23 +279,23 @@ function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");
 }
   <script>
+window.onload = function () {
 
-window.addEventListener("load",function(){
+    setTimeout(function () {
 
-setTimeout(function(){
+        const loader = document.getElementById("loader");
 
-document.getElementById("loader").style.opacity="0";
+        loader.style.opacity = "0";
 
-setTimeout(function(){
+        loader.style.visibility = "hidden";
 
-document.getElementById("loader").style.display="none";
+        setTimeout(function () {
+            loader.remove();
+        }, 800);
 
-},800);
+    }, 1800);
 
-},1800);
-
-});
-
+};
 </script>
 </body>
 </html>
