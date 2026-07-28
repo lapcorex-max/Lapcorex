@@ -235,7 +235,7 @@ nav a{
     margin:10px 0;
 }
 }
-.whatsapp-float {
+.floating-whatsapp {
     animation: whatsappPulse 1.5s infinite;
 }
 
