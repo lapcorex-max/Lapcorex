@@ -555,3 +555,110 @@ nav a{
         height: 135px;
     }
 }
+/* ===== BRANDS SECTION ===== */
+
+.brands-section {
+    padding: 70px 20px 90px;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(74, 144, 226, 0.18), transparent 32%),
+        radial-gradient(circle at 90% 75%, rgba(80, 160, 255, 0.20), transparent 35%),
+        linear-gradient(135deg, #f4f9ff, #dcecff);
+}
+
+.brands-section h2 {
+    font-size: 38px;
+    color: #12499b;
+    margin-bottom: 10px;
+}
+
+.brand-line {
+    width: 75px;
+    height: 5px;
+    background: #2f80ed;
+    border-radius: 10px;
+    margin: 0 auto 35px;
+}
+
+.brand-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.brand-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    padding: 20px;
+
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 10px 25px rgba(20, 70, 130, 0.15);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.brand-card img {
+    width: 100%;
+    height: 235px;
+
+    object-fit: contain;
+    display: block;
+}
+
+.brand-card h3 {
+    font-size: 25px;
+    color: #12499b;
+    margin: 8px 0 0;
+}
+
+/* Hover effect */
+
+.brand-card:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 18px 35px rgba(20, 70, 130, 0.25);
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .brands-section {
+        padding: 50px 15px;
+    }
+
+    .brands-section h2 {
+        font-size: 30px;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-card {
+        height: 300px;
+    }
+
+}
