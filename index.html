@@ -25,6 +25,18 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
+<div id="loader">
+
+    <div class="loader-glow"></div>
+
+    <h1>LAPCOREX</h1>
+
+    <p>Loading Experience...</p>
+
+</div>
+
+<header>
+
 <header>
 <div class="menu-btn" onclick="toggleMenu()">
     ☰
@@ -266,6 +278,24 @@ AOS.init({
 function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");
 }
-  </script>
+  <script>
+
+window.addEventListener("load",function(){
+
+setTimeout(function(){
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(function(){
+
+document.getElementById("loader").style.display="none";
+
+},800);
+
+},1800);
+
+});
+
+</script>
 </body>
 </html>
