@@ -1492,3 +1492,42 @@ animation:floatLaptop 3s ease-in-out infinite;
 }
 
 }
+/* ===== MOBILE WHATSAPP POSITION FIX ===== */
+
+@media (max-width: 768px) {
+
+    .floating-whatsapp {
+        position: fixed !important;
+
+        right: 22px !important;
+        left: auto !important;
+        bottom: 25px !important;
+
+        width: 55px !important;
+        height: 55px !important;
+
+        font-size: 28px !important;
+
+        margin: 0 !important;
+
+        z-index: 99999 !important;
+
+        /* old outline is causing overflow */
+        outline: none !important;
+        outline-offset: 0 !important;
+
+        transform: none;
+    }
+
+    /* Keep pulse/ring inside safe mobile area */
+
+    .floating-whatsapp::before {
+        width: 55px !important;
+        height: 55px !important;
+
+        top: 50% !important;
+        left: 50% !important;
+
+        border-width: 2px !important;
+    }
+}
