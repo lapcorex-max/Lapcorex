@@ -1350,3 +1350,145 @@ nav a:hover{
 .cards .card:hover i {
     color: #8cff00 !important;
 }
+/* ===========================
+   PREMIUM MOBILE ANIMATIONS
+=========================== */
+
+/* Floating Hero Image */
+.right img{
+    animation: floatLaptop 4s ease-in-out infinite;
+}
+
+@keyframes floatLaptop{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* Brand Cards */
+.brand-card{
+    animation:fadeUp .8s ease both;
+}
+
+.brand-card:nth-child(2){animation-delay:.1s;}
+.brand-card:nth-child(3){animation-delay:.2s;}
+.brand-card:nth-child(4){animation-delay:.3s;}
+.brand-card:nth-child(5){animation-delay:.4s;}
+.brand-card:nth-child(6){animation-delay:.5s;}
+
+/* Laptop Cards */
+.laptop-card{
+    animation:fadeUp .8s ease both;
+}
+
+.laptop-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+/* Shine Effect */
+
+.brand-card::after,
+.laptop-card::after{
+    content:"";
+    position:absolute;
+    top:-150%;
+    left:-60%;
+    width:45%;
+    height:350%;
+    background:rgba(255,255,255,.18);
+    transform:rotate(25deg);
+    transition:.8s;
+}
+
+.brand-card:hover::after,
+.laptop-card:hover::after{
+    left:150%;
+}
+
+/* Button Animation */
+
+.btn,
+.stock-whatsapp{
+
+transition:.35s;
+}
+
+.btn:hover,
+.stock-whatsapp:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 25px #00a8ff,
+0 0 40px #8cff00;
+}
+
+/* Service Cards */
+
+.card{
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 20px rgba(0,168,255,.4);
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Smooth Scroll */
+
+section{
+
+animation:fadeUp .9s ease;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.brand-card:hover,
+
+.laptop-card:hover,
+
+.card:hover{
+
+transform:none;
+
+}
+
+.right img{
+
+animation:floatLaptop 3s ease-in-out infinite;
+
+}
+
+}
