@@ -1591,3 +1591,13 @@ img{
     right:15px !important;
     bottom:15px !important;
 }
+.hero .btn{
+    display:inline-block;
+    margin-bottom:35px !important;
+    position:relative;
+    z-index:10;
+}
+
+.right img{
+    margin-top:20px;
+}
