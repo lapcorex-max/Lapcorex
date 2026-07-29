@@ -412,7 +412,15 @@ function toggleMenu(){
 <script>
 
 function toggleAIChat() {
-    document.getElementById("aiChatBox").classList.toggle("show");
+
+    const chat = document.getElementById("aiChatBox");
+
+    chat.classList.toggle("show");
+
+    // Chat close ചെയ്താൽ voice ഉടൻ stop
+    if (!chat.classList.contains("show")) {
+        window.speechSynthesis.cancel();
+    }
 }
 
 function addUserMessage(text) {
