@@ -2069,3 +2069,45 @@ img{
         bottom: 85px;
     }
 }
+/* AI ROBOT ANIMATION */
+
+.ai-chat-btn {
+    animation: robotFloat 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes robotFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(-6deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(6deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.ai-chat-btn:hover {
+    animation: robotExcited 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes robotExcited {
+    from {
+        transform: scale(1.05) rotate(-8deg);
+    }
+
+    to {
+        transform: scale(1.15) rotate(8deg);
+    }
+}
