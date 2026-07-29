@@ -1925,3 +1925,147 @@ img{
         box-sizing: border-box !important;
     }
 }
+/* LAPCOREX AI ASSISTANT */
+
+.ai-chat-btn {
+    position: fixed;
+    right: 22px;
+    bottom: 90px;
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    background: #00bfff;
+    font-size: 27px;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 5px 20px rgba(0,191,255,.4);
+}
+
+.ai-chat-box {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 160px;
+    width: 350px;
+    height: 500px;
+    background: #071b30;
+    border: 1px solid #00bfff;
+    border-radius: 18px;
+    overflow: hidden;
+    z-index: 999999;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+}
+
+.ai-chat-box.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-chat-header {
+    background: #0b3d91;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ai-chat-header small {
+    display: block;
+    margin-top: 3px;
+    opacity: .8;
+}
+
+.ai-chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.ai-chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.ai-message,
+.user-message {
+    padding: 11px 13px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.ai-message {
+    background: #123554;
+    color: white;
+    margin-right: 25px;
+}
+
+.user-message {
+    background: #00bfff;
+    color: #001525;
+    margin-left: 25px;
+}
+
+.ai-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+}
+
+.ai-options button {
+    background: #102d48;
+    border: 1px solid #00bfff;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ai-chat-input {
+    display: flex;
+    padding: 10px;
+    background: #061525;
+    gap: 7px;
+}
+
+.ai-chat-input input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #254866;
+    background: #10283d;
+    color: white;
+    padding: 11px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.ai-chat-input button {
+    border: none;
+    background: #00bfff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .ai-chat-box {
+        width: calc(100% - 24px);
+        height: 70vh;
+        right: 12px;
+        bottom: 85px;
+    }
+
+    .ai-chat-btn {
+        right: 18px;
+        bottom: 85px;
+    }
+}
