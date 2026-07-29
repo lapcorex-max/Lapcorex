@@ -364,7 +364,216 @@ function toggleMenu(){
     document.getElementById("menu").classList.toggle("active");
 }
 </script>
+<!-- LAPCOREX LAPTOP ASSISTANT -->
 
+<button class="ai-chat-btn" onclick="toggleAIChat()">🤖</button>
+
+<div class="ai-chat-box" id="aiChatBox">
+
+    <div class="ai-chat-header">
+        <div>
+            <b>🤖 Lapcorex AI</b>
+            <small>Laptop Support Assistant</small>
+        </div>
+
+        <button onclick="toggleAIChat()">×</button>
+    </div>
+
+    <div class="ai-chat-body" id="aiChatBody">
+
+        <div class="ai-message">
+            Hi 👋 I'm Lapcorex AI.<br>
+            Tell me what's wrong with your laptop.
+        </div>
+
+        <div class="ai-options">
+            <button onclick="quickIssue('display')">🖥 No Display</button>
+            <button onclick="quickIssue('power')">⚡ Not Turning On</button>
+            <button onclick="quickIssue('wifi')">📶 Wi-Fi Issue</button>
+            <button onclick="quickIssue('slow')">🐌 Laptop Slow</button>
+            <button onclick="quickIssue('battery')">🔋 Battery Issue</button>
+            <button onclick="quickIssue('heat')">🌡 Overheating</button>
+        </div>
+
+    </div>
+
+    <div class="ai-chat-input">
+        <input
+            id="aiUserInput"
+            type="text"
+            placeholder="Describe your laptop issue..."
+            onkeydown="if(event.key === 'Enter') sendAIMessage()"
+        >
+        <button onclick="sendAIMessage()">Send</button>
+    </div>
+
+</div>
+
+<script>
+
+function toggleAIChat() {
+    document.getElementById("aiChatBox").classList.toggle("show");
+}
+
+function addUserMessage(text) {
+
+    const body = document.getElementById("aiChatBody");
+
+    body.innerHTML +=
+        '<div class="user-message">' + text + '</div>';
+
+    body.scrollTop = body.scrollHeight;
+}
+
+function addAIMessage(text) {
+
+    const body = document.getElementById("aiChatBody");
+
+    body.innerHTML +=
+        '<div class="ai-message">' + text + '</div>';
+
+    body.scrollTop = body.scrollHeight;
+}
+
+function quickIssue(issue) {
+
+    let userText = "";
+    let reply = "";
+
+    if(issue === "display") {
+
+        userText = "Laptop turns on but no display";
+
+        reply =
+        "Let's check it.<br><br>" +
+        "1. Check whether the fan or power LED turns on.<br>" +
+        "2. Increase screen brightness.<br>" +
+        "3. Disconnect charger and external devices, then restart.<br>" +
+        "4. If possible, test an external monitor via HDMI.<br><br>" +
+        "If the laptop powers on but still has no display, RAM, display, motherboard or related hardware may need inspection.";
+
+    }
+
+    else if(issue === "power") {
+
+        userText = "Laptop is not turning on";
+
+        reply =
+        "Try these checks:<br><br>" +
+        "1. Check the charger and wall socket.<br>" +
+        "2. Disconnect USB devices and accessories.<br>" +
+        "3. If the battery is removable, disconnect it and test with the charger.<br>" +
+        "4. Hold the power button for about 20 seconds, reconnect power and try again.<br><br>" +
+        "If there are still no lights or signs of power, technician inspection is recommended.";
+
+    }
+
+    else if(issue === "wifi") {
+
+        userText = "Wi-Fi is not working";
+
+        reply =
+        "Try this:<br><br>" +
+        "1. Turn Wi-Fi off and on.<br>" +
+        "2. Restart the laptop and router.<br>" +
+        "3. Check Airplane Mode.<br>" +
+        "4. Check the Wi-Fi adapter in Device Manager.<br>" +
+        "5. Update or reinstall the correct Wi-Fi driver.";
+
+    }
+
+    else if(issue === "slow") {
+
+        userText = "My laptop is very slow";
+
+        reply =
+        "Let's narrow it down:<br><br>" +
+        "1. Open Task Manager and check CPU, Memory and Disk usage.<br>" +
+        "2. Disable unnecessary startup apps.<br>" +
+        "3. Check free storage space.<br>" +
+        "4. Run a malware scan.<br>" +
+        "5. If the laptop uses an HDD, an SSD upgrade can make a major difference.";
+
+    }
+
+    else if(issue === "battery") {
+
+        userText = "Laptop battery has a problem";
+
+        reply =
+        "Check these first:<br><br>" +
+        "1. Confirm the charger is detected.<br>" +
+        "2. Check whether Windows shows 'Plugged in'.<br>" +
+        "3. Try another compatible charger if available.<br>" +
+        "4. Check battery health.<br><br>" +
+        "A swollen, leaking, unusually hot or physically damaged battery should not be used.";
+
+    }
+
+    else if(issue === "heat") {
+
+        userText = "Laptop is overheating";
+
+        reply =
+        "Try these checks:<br><br>" +
+        "1. Use the laptop on a hard, flat surface.<br>" +
+        "2. Make sure the air vents are not blocked.<br>" +
+        "3. Check whether the cooling fan is running.<br>" +
+        "4. Check CPU usage for unusually heavy processes.<br><br>" +
+        "Persistent overheating may require internal cleaning or cooling-system service.";
+
+    }
+
+    addUserMessage(userText);
+
+    setTimeout(function() {
+        addAIMessage(reply);
+    }, 400);
+}
+
+function sendAIMessage() {
+
+    const input = document.getElementById("aiUserInput");
+    const text = input.value.trim();
+
+    if(text === "") return;
+
+    addUserMessage(text);
+    input.value = "";
+
+    setTimeout(function() {
+
+        const msg = text.toLowerCase();
+
+        if(msg.includes("display") || msg.includes("screen")) {
+            addAIMessage("If the laptop powers on but the screen stays blank, check the power LED/fan first and test an external monitor via HDMI if possible.");
+        }
+
+        else if(msg.includes("wifi") || msg.includes("wi-fi")) {
+            addAIMessage("Check Airplane Mode, restart the router and laptop, then check the Wi-Fi adapter and driver in Device Manager.");
+        }
+
+        else if(msg.includes("battery") || msg.includes("charging")) {
+            addAIMessage("Check whether the charger is detected and whether Windows shows the battery as charging. A battery-health check can help identify a worn battery.");
+        }
+
+        else if(msg.includes("slow") || msg.includes("hang")) {
+            addAIMessage("Open Task Manager and check CPU, RAM and Disk usage. High disk usage, low RAM or an old HDD can cause major slowdowns.");
+        }
+
+        else if(msg.includes("heat") || msg.includes("hot")) {
+            addAIMessage("Check the vents, fan operation and CPU usage. If overheating continues, the cooling system may need cleaning or service.");
+        }
+
+        else {
+            addAIMessage("I need a little more detail. Does the laptop turn on? Are there any lights, fan noise, error messages or beep sounds?");
+        }
+
+    }, 500);
+}
+
+</script>
+  
 </body>
 </html>
  
