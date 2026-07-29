@@ -433,6 +433,24 @@ function addAIMessage(text) {
         '<div class="ai-message">' + text + '</div>';
 
     body.scrollTop = body.scrollHeight;
+
+    // Speak the same reply
+    const voiceText = text.replace(/<[^>]*>/g, " ");
+    speakAI(voiceText);
+}
+
+function speakAI(text) {
+
+    window.speechSynthesis.cancel();
+
+    const speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = "en-IN";
+    speech.rate = 0.95;
+    speech.pitch = 1.05;
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
 }
 
 function quickIssue(issue) {
