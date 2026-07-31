@@ -5542,3 +5542,187 @@ nav a:hover {
         max-width: 90vw;
     }
 }
+/* ==================================
+   LAPCOREX NEON DANDELION FLUFF
+================================== */
+
+.neon-fluff-layer {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 50;
+}
+
+
+/* ONE FLUFF */
+
+.neon-fluff {
+
+    position: absolute;
+
+    bottom: -60px;
+
+    border-radius: 50%;
+
+    opacity: .6;
+
+    filter:
+        drop-shadow(0 0 4px #d87cff)
+        drop-shadow(0 0 10px #a83cff);
+
+    animation:
+        fluffFly linear infinite,
+        fluffSway ease-in-out infinite alternate;
+}
+
+
+/* CENTER */
+
+.neon-fluff::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #f1c6ff;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #cf72ff,
+        0 0 18px #922cff;
+}
+
+
+/* FLUFF HAIRS */
+
+.neon-fluff::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            0deg,
+            transparent 47%,
+            #dca0ff 49%,
+            transparent 52%
+        ),
+
+        linear-gradient(
+            45deg,
+            transparent 47%,
+            #bd68ff 49%,
+            transparent 52%
+        ),
+
+        linear-gradient(
+            90deg,
+            transparent 47%,
+            #e2b0ff 49%,
+            transparent 52%
+        ),
+
+        linear-gradient(
+            135deg,
+            transparent 47%,
+            #bd68ff 49%,
+            transparent 52%
+        );
+
+    filter:
+        drop-shadow(0 0 3px #c05cff)
+        drop-shadow(0 0 7px #8e2cff);
+}
+
+
+/* UPWARD + SIDE MOVEMENT */
+
+@keyframes fluffFly {
+
+    0% {
+        transform:
+            translate3d(0, 80px, 0)
+            rotate(0deg)
+            scale(.65);
+    }
+
+    25% {
+        transform:
+            translate3d(45px, -30vh, 0)
+            rotate(100deg)
+            scale(.85);
+    }
+
+    50% {
+        transform:
+            translate3d(-35px, -60vh, 0)
+            rotate(190deg)
+            scale(1);
+    }
+
+    75% {
+        transform:
+            translate3d(60px, -90vh, 0)
+            rotate(280deg)
+            scale(.8);
+    }
+
+    100% {
+        transform:
+            translate3d(-25px, -125vh, 0)
+            rotate(360deg)
+            scale(.6);
+    }
+
+}
+
+
+/* WIND SWAY */
+
+@keyframes fluffSway {
+
+    from {
+        margin-left: -25px;
+    }
+
+    to {
+        margin-left: 35px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .neon-fluff{
+        filter:
+            drop-shadow(0 0 3px #d87cff)
+            drop-shadow(0 0 7px #922cff);
+    }
+
+}
