@@ -3629,8 +3629,8 @@ nav a::after{
 
     header {
         position: relative !important;
-        height: 75px !important;
-        min-height: 75px !important;
+        height: 60px !important;
+        min-height: 60px !important;
         width: 100% !important;
 
         padding: 0 !important;
@@ -3713,7 +3713,7 @@ nav a::after{
         display: none !important;
 
         position: absolute !important;
-        top: 75px !important;
+        top: 60px !important;
         left: 0 !important;
 
         width: 100% !important;
