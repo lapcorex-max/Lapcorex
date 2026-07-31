@@ -3671,7 +3671,7 @@ nav a::after{
         position: absolute !important;
 
         left: auto !important;
-        right: 5px !important;
+        right: 0px !important;
 
         top: 50% !important;
         transform: translateY(-50%) !important;
