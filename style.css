@@ -2904,3 +2904,96 @@ nav a::after{
         margin-right:auto;
     }
 }
+/* ===== LAPCOREX MOBILE HEADER FINAL FIX ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        position: sticky !important;
+        top: 0 !important;
+
+        width: 100% !important;
+        min-height: 75px !important;
+
+        padding: 8px 18px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        background: #030617 !important;
+        overflow: visible !important;
+        z-index: 999999 !important;
+    }
+
+    /* LOGO */
+
+    header .logo {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+    }
+
+    header .logo img {
+        width: 85px !important;
+        height: 60px !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    /* HAMBURGER */
+
+    .menu-btn {
+        display: block !important;
+        position: static !important;
+
+        margin: 0 !important;
+        padding: 5px !important;
+
+        font-size: 32px !important;
+        line-height: 1 !important;
+        color: #fff !important;
+
+        cursor: pointer !important;
+    }
+
+    /* MENU */
+
+    #menu {
+        display: none !important;
+
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 8px 0 !important;
+
+        flex-direction: column !important;
+
+        background: #05091b !important;
+
+        border-top: 1px solid #9b3cff !important;
+        border-bottom: 1px solid #9b3cff !important;
+
+        z-index: 9999999 !important;
+    }
+
+    #menu.active {
+        display: flex !important;
+    }
+
+    #menu a {
+        width: 100% !important;
+        padding: 13px 22px !important;
+        margin: 0 !important;
+
+        text-align: left !important;
+        color: #fff !important;
+        background: transparent !important;
+    }
+}
