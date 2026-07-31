@@ -5492,3 +5492,53 @@ nav a:hover {
     }
 
 }
+/* ===== LAPCOREX REAL COOLING FAN ===== */
+
+.cooling-fan-box {
+    width: 520px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cooling-fan-img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    filter:
+        drop-shadow(0 0 10px rgba(190, 70, 255, 0.65))
+        drop-shadow(0 0 28px rgba(140, 40, 255, 0.35));
+
+    animation: fanFloat 4s ease-in-out infinite;
+}
+
+/* Fan image മുഴുവൻ കറക്കാതെ floating effect മാത്രം */
+@keyframes fanFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-12px) scale(1.02);
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .cooling-fan-box {
+        width: 100%;
+        height: 280px;
+        margin: 10px auto 0;
+    }
+
+    .cooling-fan-img {
+        width: 290px;
+        max-width: 90vw;
+    }
+}
