@@ -3180,3 +3180,58 @@ nav a::after{
         display: block !important;
     }
 }
+/* ===== FORCE MOBILE LOGO TO TOP RIGHT ===== */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        position: relative !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        height: 100px !important;
+        min-height: 100px !important;
+        padding: 10px 20px !important;
+    }
+
+    /* Hamburger stays LEFT */
+    .menu-btn {
+        position: absolute !important;
+        left: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        z-index: 10000001 !important;
+    }
+
+    /* FORCE LOGO RIGHT */
+    header .logo {
+        position: absolute !important;
+        left: auto !important;
+        right: 15px !important;
+        top: 50% !important;
+        bottom: auto !important;
+
+        transform: translateY(-50%) !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+        z-index: 10000002 !important;
+    }
+
+    header .logo img {
+        display: block !important;
+
+        width: 115px !important;
+        max-width: 115px !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
