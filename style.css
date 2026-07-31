@@ -3208,7 +3208,7 @@ nav a::after{
     header .logo {
         position: absolute !important;
         left: auto !important;
-        right: 15px !important;
+        right: 10px !important;
         top: 50% !important;
         bottom: auto !important;
 
