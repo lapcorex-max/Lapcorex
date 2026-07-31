@@ -4390,4 +4390,384 @@ nav a:hover {
     }
 
 }
+/* ========================================
+   LAPCOREX NEON COOLING FAN
+======================================== */
 
+.cooling-fan-3d {
+    width: 520px;
+    height: 420px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1000px;
+}
+
+
+/* PURPLE BACK GLOW */
+
+.fan-aura {
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(184, 76, 255, .28) 0%,
+        rgba(123, 40, 255, .15) 35%,
+        transparent 70%
+    );
+
+    filter: blur(15px);
+
+    animation: fanAura 3s ease-in-out infinite;
+}
+
+
+/* FAN BODY */
+
+.fan-body {
+    width: 310px;
+    height: 310px;
+
+    position: relative;
+
+    border-radius: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #202239,
+            #080914 45%,
+            #15172a
+        );
+
+    border: 3px solid rgba(191, 107, 255, .45);
+
+    box-shadow:
+        inset 0 0 30px rgba(184, 76, 255, .15),
+        0 0 15px rgba(184, 76, 255, .5),
+        0 0 45px rgba(139, 45, 255, .35),
+        0 30px 45px rgba(0, 0, 0, .6);
+
+    transform:
+        rotateX(8deg)
+        rotateY(-8deg);
+
+    animation: fanFloat 4s ease-in-out infinite;
+}
+
+
+/* FAN OUTER RING */
+
+.fan-ring {
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #080912 0 55%,
+            #17182a 56% 66%,
+            #090a13 67%
+        );
+
+    border: 4px solid #a94cff;
+
+    box-shadow:
+        0 0 10px #b84cff,
+        0 0 25px rgba(184, 76, 255, .8),
+        0 0 60px rgba(120, 30, 255, .5),
+        inset 0 0 25px rgba(184, 76, 255, .5);
+}
+
+
+/* ROTATING FAN */
+
+.fan-blades {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    animation: spinFan .85s linear infinite;
+}
+
+
+/* INDIVIDUAL BLADES */
+
+.blade {
+    position: absolute;
+
+    width: 52px;
+    height: 100px;
+
+    left: 50%;
+    top: 50%;
+
+    margin-left: -26px;
+    margin-top: -92px;
+
+    transform-origin: 26px 92px;
+
+    border-radius:
+        70% 20%
+        70% 25%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0d7ff 0%,
+            #c15cff 20%,
+            #8c28ff 55%,
+            #35106e 100%
+        );
+
+    box-shadow:
+        0 0 8px #d88aff,
+        0 0 18px rgba(184, 76, 255, .9),
+        inset 5px 4px 10px rgba(255,255,255,.25);
+}
+
+
+.b1 {
+    transform: rotate(0deg);
+}
+
+.b2 {
+    transform: rotate(60deg);
+}
+
+.b3 {
+    transform: rotate(120deg);
+}
+
+.b4 {
+    transform: rotate(180deg);
+}
+
+.b5 {
+    transform: rotate(240deg);
+}
+
+.b6 {
+    transform: rotate(300deg);
+}
+
+
+/* CENTER HUB */
+
+.fan-center {
+    position: absolute;
+
+    width: 78px;
+    height: 78px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #e7baff,
+            #a63cff 30%,
+            #451080 65%,
+            #12051f
+        );
+
+    border: 3px solid #e0a8ff;
+
+    box-shadow:
+        0 0 10px #c25cff,
+        0 0 30px #922cff,
+        inset 0 0 15px rgba(255,255,255,.3);
+}
+
+
+.fan-center span {
+    color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 15px #c25cff;
+}
+
+
+/* PARTICLES */
+
+.fan-particle {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ca67ff;
+
+    box-shadow:
+        0 0 8px #ca67ff,
+        0 0 22px #9b32ff;
+
+    animation: fanParticle 3s ease-in-out infinite;
+}
+
+
+.fan-particle.p1 {
+    left: 10%;
+    top: 20%;
+}
+
+.fan-particle.p2 {
+    right: 7%;
+    top: 28%;
+    animation-delay: .7s;
+}
+
+.fan-particle.p3 {
+    left: 15%;
+    bottom: 18%;
+    animation-delay: 1.3s;
+}
+
+.fan-particle.p4 {
+    right: 12%;
+    bottom: 14%;
+    animation-delay: 1.8s;
+}
+
+
+/* SHADOW */
+
+.fan-shadow {
+    position: absolute;
+
+    width: 280px;
+    height: 35px;
+
+    bottom: 35px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, .65);
+
+    filter: blur(12px);
+
+    box-shadow:
+        0 0 30px rgba(153, 48, 255, .25);
+}
+
+
+/* =============================
+   ANIMATIONS
+============================= */
+
+@keyframes spinFan {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes fanFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotateX(8deg)
+            rotateY(-8deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotateX(5deg)
+            rotateY(6deg);
+    }
+
+}
+
+
+@keyframes fanAura {
+
+    0%, 100% {
+        transform: scale(.9);
+        opacity: .55;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes fanParticle {
+
+    0%, 100% {
+        transform: translateY(0) scale(.7);
+        opacity: .3;
+    }
+
+    50% {
+        transform: translateY(-25px) scale(1.6);
+        opacity: 1;
+    }
+
+}
+
+
+/* =============================
+   MOBILE
+============================= */
+
+@media (max-width: 768px) {
+
+    .cooling-fan-3d {
+        width: 100%;
+        height: 300px;
+
+        margin: 10px auto;
+
+        transform: scale(.72);
+    }
+
+}
