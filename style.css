@@ -2111,3 +2111,755 @@ img{
         transform: scale(1.15) rotate(8deg);
     }
 }
+/* =====================================================
+   LAPCOREX PURPLE + SILVER FINAL THEME
+   KEEP THIS AT THE VERY BOTTOM OF style.css
+===================================================== */
+
+:root{
+    --lx-dark:#02030b;
+    --lx-dark2:#080b19;
+    --lx-dark3:#101326;
+
+    --lx-purple:#8b3dff;
+    --lx-violet:#b64cff;
+    --lx-pink:#e76cff;
+
+    --lx-silver:#e9ecf5;
+    --lx-muted:#b8bdd0;
+    --lx-white:#ffffff;
+}
+
+/* PAGE BACKGROUND */
+
+body{
+    background:
+        radial-gradient(circle at 15% 20%,
+        rgba(139,61,255,.15),transparent 32%),
+
+        radial-gradient(circle at 85% 60%,
+        rgba(231,108,255,.10),transparent 30%),
+
+        linear-gradient(
+        135deg,
+        #02030b,
+        #080b19 55%,
+        #02030b
+        ) !important;
+
+    color:#fff !important;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    background:
+        linear-gradient(
+        180deg,
+        rgba(10,11,28,.98),
+        rgba(2,3,11,.98)
+        ) !important;
+
+    border-bottom:1px solid #8b3dff !important;
+
+    box-shadow:
+        0 3px 15px rgba(139,61,255,.45),
+        0 0 35px rgba(182,76,255,.15) !important;
+}
+
+
+/* LAPCOREX HEADER TEXT */
+
+.logo,
+header h1{
+    color:#ffffff !important;
+
+    text-shadow:
+        0 0 6px #8b3dff,
+        0 0 15px rgba(182,76,255,.8),
+        0 0 28px rgba(139,61,255,.4) !important;
+}
+
+
+/* ================= NAV ================= */
+
+nav a{
+    color:#ffffff !important;
+}
+
+nav a:hover{
+    color:#d56cff !important;
+
+    text-shadow:
+        0 0 8px #b64cff,
+        0 0 18px rgba(182,76,255,.8) !important;
+}
+
+nav a::after{
+    background:#b64cff !important;
+
+    box-shadow:
+        0 0 10px #8b3dff,
+        0 0 20px #b64cff !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    background:
+
+        radial-gradient(
+        circle at 72% 42%,
+        rgba(139,61,255,.24),
+        transparent 34%
+        ),
+
+        radial-gradient(
+        circle at 25% 75%,
+        rgba(231,108,255,.10),
+        transparent 30%
+        ),
+
+        linear-gradient(
+        135deg,
+        #02030b,
+        #0b0d20,
+        #050611
+        ) !important;
+}
+
+
+/* HERO HEADINGS */
+
+.hero h1,
+.hero h2{
+    color:#ffffff !important;
+
+    text-shadow:
+        0 0 15px rgba(139,61,255,.22) !important;
+}
+
+
+/* HERO PARAGRAPH */
+
+.hero p{
+    color:#c9ccda !important;
+}
+
+
+/* ================= OFFER BADGE ================= */
+
+.offer-badge{
+    background:
+        linear-gradient(
+        135deg,
+        #7130d9,
+        #b64cff
+        ) !important;
+
+    color:#fff !important;
+
+    border:1px solid rgba(231,108,255,.8);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.3),
+        0 0 12px rgba(139,61,255,.6),
+        0 0 25px rgba(182,76,255,.25) !important;
+}
+
+
+/* ================= MAIN BUTTON ================= */
+
+.btn{
+    background:
+        linear-gradient(
+        135deg,
+        #7330db,
+        #b64cff
+        ) !important;
+
+    color:#ffffff !important;
+
+    border:1px solid #c66cff !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.35),
+        0 0 10px rgba(139,61,255,.65),
+        0 0 28px rgba(182,76,255,.35) !important;
+}
+
+.btn:hover{
+    transform:translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 0 15px #8b3dff,
+        0 0 35px rgba(182,76,255,.65) !important;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.services,
+#services,
+.brands-section,
+#brands,
+.stock-section,
+#stock,
+#gallery,
+#contact,
+.about-section,
+.why-section{
+
+    background:
+
+        radial-gradient(
+        circle at 20% 20%,
+        rgba(139,61,255,.10),
+        transparent 30%
+        ),
+
+        radial-gradient(
+        circle at 80% 80%,
+        rgba(231,108,255,.06),
+        transparent 30%
+        ),
+
+        linear-gradient(
+        135deg,
+        #080a18,
+        #02030b
+        ) !important;
+
+    color:#fff !important;
+}
+
+
+/* ================= SECTION TITLES ================= */
+
+.services h2,
+#services h2,
+.brands-section h2,
+#brands h2,
+.stock-section h2,
+#stock h2,
+#gallery h2,
+.about-section h2,
+.why-section h2{
+
+    color:#ffffff !important;
+
+    text-shadow:
+        0 0 8px #8b3dff,
+        0 0 20px rgba(182,76,255,.55) !important;
+}
+
+
+/* PURPLE TITLE LINES */
+
+.brand-line,
+.about-line,
+.why-line{
+
+    background:
+        linear-gradient(
+        90deg,
+        #6330c9,
+        #b64cff,
+        #e76cff
+        ) !important;
+
+    box-shadow:
+        0 0 12px rgba(182,76,255,.8) !important;
+}
+
+
+/* ================= SERVICE CARDS ================= */
+
+.cards .card,
+.card{
+
+    background:
+        linear-gradient(
+        145deg,
+        #101329,
+        #050611
+        ) !important;
+
+    color:#fff !important;
+
+    border:
+        1px solid rgba(139,61,255,.75) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 12px 30px rgba(0,0,0,.55),
+        0 0 12px rgba(139,61,255,.20) !important;
+}
+
+
+.cards .card i,
+.card i{
+
+    color:#b64cff !important;
+
+    text-shadow:
+        0 0 10px rgba(182,76,255,.8) !important;
+}
+
+
+.cards .card h3,
+.card h3{
+
+    color:#ffffff !important;
+}
+
+
+.cards .card:hover,
+.card:hover{
+
+    border-color:#e76cff !important;
+
+    box-shadow:
+        0 0 12px #8b3dff,
+        0 0 30px rgba(182,76,255,.45),
+        0 0 45px rgba(231,108,255,.15) !important;
+}
+
+
+.cards .card:hover i{
+
+    color:#e76cff !important;
+}
+
+
+/* ================= BRAND CARDS ================= */
+
+.brand-card,
+.brand-item{
+
+    background:
+        linear-gradient(
+        145deg,
+        #101329,
+        #050611
+        ) !important;
+
+    border:
+        1px solid rgba(139,61,255,.75) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        0 12px 30px rgba(0,0,0,.55),
+        0 0 12px rgba(139,61,255,.20) !important;
+}
+
+
+.brand-card h3,
+.brand-item h3{
+
+    color:#c36cff !important;
+
+    text-shadow:
+        0 0 10px rgba(182,76,255,.45) !important;
+}
+
+
+.brand-card:hover,
+.brand-item:hover{
+
+    border-color:#e76cff !important;
+
+    box-shadow:
+        0 0 12px #8b3dff,
+        0 0 30px rgba(182,76,255,.45),
+        0 0 45px rgba(231,108,255,.18) !important;
+}
+
+
+.brand-card:hover h3,
+.brand-item:hover h3{
+
+    color:#f0c7ff !important;
+}
+
+
+/* ================= LAPTOP CARDS ================= */
+
+.laptop-card{
+
+    background:
+        linear-gradient(
+        145deg,
+        #101329,
+        #050611
+        ) !important;
+
+    color:#fff !important;
+
+    border:
+        1px solid rgba(139,61,255,.7) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 15px 35px rgba(0,0,0,.55),
+        0 0 15px rgba(139,61,255,.18) !important;
+}
+
+
+.laptop-card:hover{
+
+    border-color:#e76cff !important;
+
+    box-shadow:
+        0 0 12px #8b3dff,
+        0 0 30px rgba(182,76,255,.45),
+        0 0 40px rgba(231,108,255,.15) !important;
+}
+
+
+.laptop-info h3{
+
+    color:#c36cff !important;
+}
+
+
+.laptop-info p{
+
+    color:#d7d9e6 !important;
+}
+
+
+/* PRICE = SILVER/PURPLE */
+
+.laptop-price{
+
+    color:#f0e9ff !important;
+
+    text-shadow:
+        0 0 8px #8b3dff,
+        0 0 18px rgba(182,76,255,.55) !important;
+}
+
+
+/* STOCK BADGE */
+
+.stock-badge{
+
+    background:
+        linear-gradient(
+        135deg,
+        #7130d9,
+        #c45cff
+        ) !important;
+
+    color:#fff !important;
+
+    box-shadow:
+        0 0 12px rgba(182,76,255,.6) !important;
+}
+
+
+/* PRODUCT WHATSAPP BUTTON
+   WhatsApp stays green intentionally */
+
+.stock-whatsapp{
+
+    background:#25D366 !important;
+
+    color:#fff !important;
+
+    border:1px solid #53e98b !important;
+
+    box-shadow:
+        0 0 10px rgba(37,211,102,.55),
+        0 0 22px rgba(37,211,102,.25) !important;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section p{
+
+    color:#c7cad8 !important;
+}
+
+
+.about-box{
+
+    background:
+        linear-gradient(
+        145deg,
+        #101329,
+        #050611
+        ) !important;
+
+    border:
+        1px solid rgba(139,61,255,.75) !important;
+
+    box-shadow:
+        0 0 20px rgba(139,61,255,.15) !important;
+}
+
+
+.about-box i{
+
+    color:#b64cff !important;
+}
+
+
+.about-box h3{
+
+    color:#d76cff !important;
+}
+
+
+.about-box:hover{
+
+    border-color:#e76cff !important;
+
+    box-shadow:
+        0 0 30px rgba(182,76,255,.35) !important;
+}
+
+
+/* ================= WHY CHOOSE ================= */
+
+.why-card{
+
+    background:
+        linear-gradient(
+        145deg,
+        #101329,
+        #050611
+        ) !important;
+
+    border:
+        1px solid rgba(139,61,255,.75) !important;
+
+    box-shadow:
+        0 0 20px rgba(139,61,255,.15) !important;
+}
+
+
+.why-card i{
+
+    color:#b64cff !important;
+}
+
+
+.why-card h3{
+
+    color:#d76cff !important;
+}
+
+
+.why-card p{
+
+    color:#cdd0de !important;
+}
+
+
+.why-card:hover{
+
+    border-color:#e76cff !important;
+
+    box-shadow:
+        0 0 30px rgba(182,76,255,.35) !important;
+}
+
+
+/* ================= AI ASSISTANT ================= */
+
+.ai-chat-btn{
+
+    background:
+        linear-gradient(
+        135deg,
+        #7130d9,
+        #c44cff
+        ) !important;
+
+    color:#fff;
+
+    border:1px solid #d56cff !important;
+
+    box-shadow:
+        0 0 12px rgba(139,61,255,.8),
+        0 0 28px rgba(182,76,255,.45) !important;
+}
+
+
+.ai-chat-box{
+
+    background:#080a18 !important;
+
+    border:
+        1px solid #8b3dff !important;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.7),
+        0 0 25px rgba(139,61,255,.25) !important;
+}
+
+
+.ai-chat-header{
+
+    background:
+        linear-gradient(
+        135deg,
+        #4c219d,
+        #8b3dff
+        ) !important;
+}
+
+
+.ai-message{
+
+    background:#171a31 !important;
+
+    color:#fff !important;
+}
+
+
+.user-message{
+
+    background:
+        linear-gradient(
+        135deg,
+        #7130d9,
+        #b64cff
+        ) !important;
+
+    color:#fff !important;
+}
+
+
+.ai-options button{
+
+    background:#15182c !important;
+
+    border:
+        1px solid #8b3dff !important;
+
+    color:#fff !important;
+}
+
+
+.ai-chat-input{
+
+    background:#050611 !important;
+}
+
+
+.ai-chat-input input{
+
+    background:#13162a !important;
+
+    border:
+        1px solid #593095 !important;
+
+    color:#fff !important;
+}
+
+
+.ai-chat-input button{
+
+    background:
+        linear-gradient(
+        135deg,
+        #7130d9,
+        #b64cff
+        ) !important;
+
+    color:#fff !important;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+/* WhatsApp original green keep */
+
+.floating-whatsapp{
+
+    background:#25D366 !important;
+
+    border:3px solid #55e88a !important;
+
+    outline:none !important;
+
+    box-shadow:
+        0 0 10px #25D366,
+        0 0 25px rgba(37,211,102,.55) !important;
+}
+
+
+.floating-whatsapp::before{
+
+    border-color:#25D366 !important;
+}
+
+
+/* ================= TEXT SELECTION ================= */
+
+::selection{
+
+    background:#8b3dff !important;
+    color:#fff !important;
+}
+
+
+/* ================= IMAGE GLOW ================= */
+
+.hero img,
+.brand-card img,
+.laptop-card img{
+
+    filter:
+        drop-shadow(0 12px 15px rgba(0,0,0,.6))
+        drop-shadow(0 0 7px rgba(139,61,255,.20));
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+@media(max-width:768px){
+
+    header{
+
+        background:
+            linear-gradient(
+            180deg,
+            #0d1024,
+            #03040d
+            ) !important;
+    }
+
+
+    #menu,
+    #menu.active,
+    #menu a{
+
+        background:#0d1024 !important;
+    }
+
+
+    #menu a:hover{
+
+        background:#17132c !important;
+
+        color:#d76cff !important;
+    }
+
+
+    .brand-card:hover,
+    .brand-item:hover,
+    .laptop-card:hover,
+    .card:hover,
+    .about-box:hover,
+    .why-card:hover{
+
+        transform:none !important;
+    }
+}
