@@ -4771,3 +4771,724 @@ nav a:hover {
     }
 
 }
+/* =========================================
+   LAPCOREX REALISTIC NEON COOLING SYSTEM
+========================================= */
+
+.cooling-fan-3d{
+    width:540px;
+    height:430px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    perspective:1200px;
+    overflow:visible;
+}
+
+
+/* BACKGROUND PURPLE AURA */
+
+.fan-aura{
+    position:absolute;
+    width:420px;
+    height:350px;
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(190,70,255,.25),
+        rgba(116,20,255,.12) 45%,
+        transparent 72%
+    );
+
+    filter:blur(20px);
+    animation:auraPulse 3s ease-in-out infinite;
+}
+
+
+/* ================================
+   MOTHERBOARD
+================================ */
+
+.motherboard{
+    position:absolute;
+
+    width:430px;
+    height:180px;
+
+    left:55px;
+    bottom:35px;
+
+    transform:
+        rotateX(64deg)
+        rotateZ(-5deg);
+
+    transform-style:preserve-3d;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            rgba(190,70,255,.12) 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            transparent 49%,
+            rgba(190,70,255,.12) 50%,
+            transparent 51%
+        ),
+        linear-gradient(145deg,#111528,#050712);
+
+    background-size:
+        35px 35px,
+        35px 35px,
+        100% 100%;
+
+    border:1px solid rgba(185,70,255,.4);
+
+    box-shadow:
+        0 0 12px rgba(190,70,255,.4),
+        0 0 35px rgba(100,20,255,.25),
+        inset 0 0 30px rgba(140,40,255,.12);
+}
+
+
+/* PCB TRACKS */
+
+.circuit-lines{
+    position:absolute;
+    inset:0;
+
+    opacity:.75;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 10%,
+            #a64cff 10% 10.5%,
+            transparent 10.5% 35%,
+            #7d30cc 35% 35.5%,
+            transparent 35.5%
+        ),
+        linear-gradient(
+            0deg,
+            transparent 25%,
+            #a64cff 25% 25.8%,
+            transparent 25.8% 70%,
+            #7224c5 70% 70.7%,
+            transparent 70.7%
+        );
+
+    filter:drop-shadow(0 0 3px #9c42ff);
+}
+
+
+/* ================================
+   IC CHIPS
+================================ */
+
+.ic-chip{
+    position:absolute;
+
+    background:
+        linear-gradient(145deg,#242735,#05060b);
+
+    border:1px solid #55596a;
+
+    border-radius:4px;
+
+    box-shadow:
+        0 4px 5px rgba(0,0,0,.8),
+        0 0 8px rgba(170,60,255,.3);
+}
+
+
+/* IC PINS */
+
+.ic-chip::before,
+.ic-chip::after{
+    content:"";
+
+    position:absolute;
+
+    left:-8px;
+
+    width:calc(100% + 16px);
+    height:5px;
+
+    background:repeating-linear-gradient(
+        90deg,
+        #aaa 0 3px,
+        transparent 3px 9px
+    );
+}
+
+.ic-chip::before{
+    top:5px;
+}
+
+.ic-chip::after{
+    bottom:5px;
+}
+
+
+.ic1{
+    width:72px;
+    height:55px;
+    left:60px;
+    top:60px;
+}
+
+.ic1 span{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#ca78ff;
+
+    font-size:15px;
+    font-weight:700;
+
+    text-shadow:0 0 8px #b84cff;
+}
+
+
+.ic2{
+    width:48px;
+    height:35px;
+    right:70px;
+    top:30px;
+}
+
+
+.ic3{
+    width:55px;
+    height:38px;
+    right:120px;
+    bottom:20px;
+}
+
+
+/* ================================
+   CAPACITORS
+================================ */
+
+.capacitor{
+    position:absolute;
+
+    width:20px;
+    height:38px;
+
+    border-radius:5px 5px 3px 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #090a10,
+            #37394a 40%,
+            #12131c 70%,
+            #050508
+        );
+
+    border-top:3px solid #77798a;
+
+    box-shadow:
+        3px 6px 5px rgba(0,0,0,.6),
+        0 0 8px rgba(180,60,255,.35);
+}
+
+
+.cap1{
+    left:155px;
+    top:55px;
+}
+
+.cap2{
+    left:185px;
+    top:68px;
+}
+
+.cap3{
+    right:45px;
+    top:75px;
+}
+
+.cap4{
+    right:90px;
+    bottom:30px;
+}
+
+
+/* SMALL ELECTRONIC COMPONENTS */
+
+.component{
+    position:absolute;
+
+    width:25px;
+    height:9px;
+
+    background:linear-gradient(
+        90deg,
+        #777,
+        #191a22 20%,
+        #282a34 80%,
+        #777
+    );
+
+    border-radius:2px;
+
+    box-shadow:0 0 4px rgba(160,60,255,.4);
+}
+
+
+.com1{left:30px;top:30px;}
+.com2{left:210px;top:35px;}
+.com3{right:35px;bottom:25px;}
+.com4{left:140px;bottom:20px;}
+.com5{right:145px;top:80px;}
+
+
+/* ================================
+   REAL FAN BODY
+================================ */
+
+.fan-body{
+    width:300px;
+    height:300px;
+
+    position:absolute;
+
+    top:30px;
+    left:120px;
+
+    z-index:10;
+
+    border-radius:32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #343747,
+            #10111a 30%,
+            #06070c 65%,
+            #222431
+        );
+
+    border:3px solid #383b49;
+
+    box-shadow:
+        0 0 8px #a746ff,
+        0 0 25px rgba(170,55,255,.6),
+        0 0 60px rgba(115,30,255,.3),
+        0 25px 30px rgba(0,0,0,.75),
+        inset 0 0 25px rgba(255,255,255,.05);
+
+    transform:
+        rotateX(4deg)
+        rotateY(-7deg)
+        rotateZ(3deg);
+
+    animation:fanFloat 4s ease-in-out infinite;
+}
+
+
+/* CORNER SCREWS */
+
+.fan-screw{
+    position:absolute;
+
+    width:20px;
+    height:20px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #888 0 12%,
+            #242632 15% 50%,
+            #090a0f 55%
+        );
+
+    border:2px solid #575a69;
+
+    box-shadow:
+        inset 0 0 5px #000,
+        0 2px 5px #000;
+}
+
+
+.screw1{top:13px;left:13px;}
+.screw2{top:13px;right:13px;}
+.screw3{bottom:13px;left:13px;}
+.screw4{bottom:13px;right:13px;}
+
+
+/* ================================
+   FAN RING
+================================ */
+
+.fan-ring{
+    position:absolute;
+
+    width:245px;
+    height:245px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #05050a 0 55%,
+            #161823 56% 64%,
+            #05060b 65%
+        );
+
+    border:4px solid #a940ff;
+
+    box-shadow:
+        0 0 10px #bd5cff,
+        0 0 25px rgba(188,70,255,.9),
+        0 0 50px rgba(130,30,255,.55),
+        inset 0 0 25px #351050;
+}
+
+
+/* ================================
+   ROTATING BLADES
+================================ */
+
+.fan-blades{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    animation:realFanSpin .65s linear infinite;
+}
+
+
+.blade{
+    position:absolute;
+
+    width:50px;
+    height:95px;
+
+    left:50%;
+    top:50%;
+
+    margin-left:-25px;
+    margin-top:-88px;
+
+    transform-origin:25px 88px;
+
+    border-radius:
+        75% 20%
+        65% 25%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2d8ff,
+            #ce6cff 18%,
+            #9d37ff 48%,
+            #57109f 75%,
+            #220638
+        );
+
+    box-shadow:
+        0 0 7px #d989ff,
+        0 0 18px rgba(184,65,255,.8),
+        inset 5px 5px 10px rgba(255,255,255,.22);
+}
+
+
+.b1{transform:rotate(0deg);}
+.b2{transform:rotate(60deg);}
+.b3{transform:rotate(120deg);}
+.b4{transform:rotate(180deg);}
+.b5{transform:rotate(240deg);}
+.b6{transform:rotate(300deg);}
+
+
+/* CENTER MOTOR */
+
+.fan-center{
+    position:absolute;
+
+    width:72px;
+    height:72px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #dca2ff,
+            #9635e8 35%,
+            #331054 70%,
+            #08030d
+        );
+
+    border:3px solid #db9cff;
+
+    box-shadow:
+        0 0 10px #d06cff,
+        0 0 25px #902aff,
+        inset 0 0 15px rgba(255,255,255,.3);
+}
+
+
+.fan-center span{
+    color:#fff;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:32px;
+    font-weight:700;
+
+    text-shadow:
+        0 0 7px #fff,
+        0 0 15px #bd4cff;
+}
+
+
+/* ================================
+   WIRES
+================================ */
+
+.wire-box{
+    position:absolute;
+
+    width:160px;
+    height:140px;
+
+    right:-5px;
+    bottom:65px;
+
+    z-index:7;
+
+    transform:rotate(-12deg);
+}
+
+
+.wire{
+    position:absolute;
+
+    width:150px;
+    height:80px;
+
+    border-radius:50%;
+
+    border:7px solid;
+
+    border-left-color:transparent !important;
+    border-bottom-color:transparent !important;
+
+    transform:rotate(35deg);
+
+    filter:drop-shadow(2px 4px 2px rgba(0,0,0,.8));
+}
+
+
+.wire.red{
+    border-color:#b82c4b;
+    top:0;
+}
+
+.wire.black{
+    border-color:#15151d;
+    top:10px;
+    right:5px;
+}
+
+.wire.blue{
+    border-color:#234f8c;
+    top:20px;
+    right:10px;
+}
+
+.wire.purple{
+    border-color:#75329e;
+    top:30px;
+    right:15px;
+}
+
+
+/* POWER CONNECTOR */
+
+.power-connector{
+    position:absolute;
+
+    width:60px;
+    height:38px;
+
+    right:10px;
+    bottom:48px;
+
+    z-index:15;
+
+    display:flex;
+    gap:4px;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eee,
+            #a9a9b0
+        );
+
+    border-radius:5px;
+
+    box-shadow:
+        0 5px 8px rgba(0,0,0,.6);
+}
+
+
+.power-connector i{
+    width:7px;
+    height:14px;
+
+    background:#292a32;
+
+    border-radius:2px;
+}
+
+
+/* PARTICLES */
+
+.fan-particle{
+    position:absolute;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#c85cff;
+
+    box-shadow:
+        0 0 8px #c85cff,
+        0 0 20px #8e2dff;
+
+    animation:particleMove 3s ease-in-out infinite;
+}
+
+
+.p1{top:12%;left:5%;}
+.p2{top:18%;right:3%;animation-delay:.7s;}
+.p3{bottom:15%;left:8%;animation-delay:1.3s;}
+.p4{bottom:10%;right:12%;animation-delay:1.8s;}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes realFanSpin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+@keyframes fanFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotateX(4deg)
+            rotateY(-7deg)
+            rotateZ(3deg);
+    }
+
+    50%{
+        transform:
+            translateY(-10px)
+            rotateX(2deg)
+            rotateY(-3deg)
+            rotateZ(2deg);
+    }
+
+}
+
+
+@keyframes auraPulse{
+
+    0%,100%{
+        transform:scale(.9);
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.1);
+        opacity:1;
+    }
+
+}
+
+
+@keyframes particleMove{
+
+    0%,100%{
+        transform:translateY(0) scale(.8);
+        opacity:.35;
+    }
+
+    50%{
+        transform:translateY(-25px) scale(1.5);
+        opacity:1;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .cooling-fan-3d{
+        width:520px;
+        height:410px;
+
+        transform:scale(.67);
+
+        transform-origin:center center;
+
+        margin:-55px auto;
+    }
+
+}
