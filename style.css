@@ -3785,3 +3785,59 @@ nav a {
     font-family: 'Poppins', sans-serif !important;
     font-weight: 600 !important;
 }
+/* ===== LAPCOREX GLOSSY TEXT COLORS ===== */
+
+/* MAIN HERO TITLE */
+.hero .left h1 {
+    color: #ffffff !important;
+    background: linear-gradient(
+        180deg,
+        #ffffff 10%,
+        #f4eaff 45%,
+        #d7b7ff 75%,
+        #a94cff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.15),
+        0 0 18px rgba(168,76,255,.18);
+}
+
+/* SECOND HEADING */
+.hero .left h2 {
+    color: #ffffff !important;
+    text-shadow:
+        0 0 6px rgba(255,255,255,.25),
+        0 0 14px rgba(176,70,255,.30);
+}
+
+/* SALES • REPAIRS • UPGRADES TEXT */
+.hero .left p {
+    color: #d9c8f5 !important;
+    text-shadow:
+        0 0 8px rgba(169,76,255,.22);
+}
+
+/* MENU */
+nav a {
+    color: #f7f0ff !important;
+    text-shadow:
+        0 0 7px rgba(177,76,255,.18);
+}
+
+nav a:hover {
+    color: #c66cff !important;
+    text-shadow:
+        0 0 8px #a94cff,
+        0 0 18px rgba(169,76,255,.75) !important;
+}
+
+/* PRICE BADGE TEXT */
+.offer-badge {
+    color: #ffffff !important;
+    text-shadow:
+        0 0 6px rgba(255,255,255,.45);
+}
