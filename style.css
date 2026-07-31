@@ -3157,3 +3157,26 @@ nav a::after{
     }
 
 }
+/* ===== MOBILE LOGO RIGHT SIDE FIX ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative !important;
+    }
+
+    .logo {
+        position: absolute !important;
+        top: 10px !important;
+        right: 15px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .logo img {
+        width: 110px !important;
+        height: auto !important;
+        display: block !important;
+    }
+}
