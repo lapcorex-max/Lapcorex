@@ -3743,3 +3743,45 @@ nav a::after{
         text-align: left !important;
     }
 }
+/* ===== LAPCOREX PROFESSIONAL FONT ===== */
+
+body {
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+/* MAIN HERO TITLE */
+.hero .left h1 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -1px !important;
+}
+
+/* HERO SECOND TITLE */
+.hero .left h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* HERO SMALL TEXT */
+.hero .left p {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* PRICE BADGE */
+.offer-badge {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* WHATSAPP BUTTON */
+.btn {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* MENU */
+nav a {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
