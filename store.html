@@ -1,27 +1,93 @@
-.store-btn{
-    background: linear-gradient(135deg,#a855f7,#7c3aed);
-    color: #fff !important;
-    padding: 10px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    animation: pulse 2s infinite;
-    box-shadow: 0 0 15px rgba(168,85,247,.7);
-    transition: .3s;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lapcorex Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.store-btn:hover{
-    transform: scale(1.05);
+body{
+    background:linear-gradient(135deg,#050816,#0b1120,#111827);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    padding:40px;
+}
+
+h1{
+    font-size:60px;
+    margin:20px 0;
+    color:#b84dff;
+    animation:pulse 2s infinite;
+}
+
+p{
+    font-size:20px;
+    color:#d1d5db;
+    margin-bottom:35px;
+}
+
+.store-icon{
+    font-size:90px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#b84dff;
+    color:#fff;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#9d2cff;
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #b84dff;
 }
 
 @keyframes pulse{
-    0%{
-        box-shadow:0 0 0 0 rgba(168,85,247,.8);
-    }
-    70%{
-        box-shadow:0 0 0 18px rgba(168,85,247,0);
-    }
-    100%{
-        box-shadow:0 0 0 0 rgba(168,85,247,0);
-    }
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
 }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="store-icon">🛒</div>
+
+<h1>COMING SOON</h1>
+
+<p>
+Our Digital Store is currently under development.<br>
+We're working hard to bring you premium digital products and exclusive downloads.
+</p>
+
+<a href="index.html" class="btn">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
