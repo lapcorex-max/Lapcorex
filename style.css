@@ -5574,8 +5574,8 @@ nav a:hover {
     opacity: .6;
 
     filter:
-        drop-shadow(0 0 4px #d87cff)
-        drop-shadow(0 0 10px #a83cff);
+        drop-shadow(0 0 3px #d87cff)
+        drop-shadow(0 0 4px #a83cff);
 
     animation:
         fluffFly linear infinite,
