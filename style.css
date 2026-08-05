@@ -5726,3 +5726,30 @@ nav a:hover {
     }
 
 }
+.store-btn{
+    background: linear-gradient(135deg,#a855f7,#7c3aed);
+    color: #fff !important;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 15px rgba(168,85,247,.7);
+    transition: .3s;
+}
+
+.store-btn:hover{
+    transform: scale(1.05);
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(168,85,247,.8);
+    }
+    70%{
+        box-shadow:0 0 0 18px rgba(168,85,247,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(168,85,247,0);
+    }
+}
