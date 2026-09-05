@@ -3,71 +3,264 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lapcorex Store</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg,#050816,#0b1120,#111827);
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    text-align:center;
-    overflow:hidden;
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(184,77,255,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(77,145,255,0.12), transparent 35%),
+        linear-gradient(135deg, #050816, #0b1120, #111827);
+    color: #fff;
+    padding: 40px 20px;
 }
 
-.container{
-    padding:40px;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
 }
 
-h1{
-    font-size:60px;
-    margin:20px 0;
-    color:#b84dff;
-    animation:pulse 2s infinite;
+/* Header */
+.store-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background: linear-gradient(135deg, #b84dff, #7c3aed);
+    box-shadow: 0 0 35px rgba(184,77,255,0.35);
 }
 
-p{
-    font-size:20px;
-    color:#d1d5db;
-    margin-bottom:35px;
+h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffffff, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.store-icon{
-    font-size:90px;
+.subtitle {
+    color: #9ca3af;
+    font-size: 17px;
+    margin-bottom: 45px;
 }
 
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    background:#b84dff;
-    color:#fff;
-    padding:15px 35px;
-    border-radius:50px;
-    font-weight:bold;
-    transition:.3s;
+/* Product Card */
+.product-card {
+    max-width: 720px;
+    margin: auto;
+    padding: 32px;
+    text-align: left;
+    border-radius: 25px;
+
+    background: rgba(17, 24, 39, 0.75);
+    border: 1px solid rgba(184,77,255,0.25);
+
+    backdrop-filter: blur(15px);
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35),
+        0 0 35px rgba(184,77,255,0.08);
+
+    transition: 0.3s ease;
 }
 
-.btn:hover{
-    background:#9d2cff;
-    transform:translateY(-5px);
-    box-shadow:0 0 25px #b84dff;
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(184,77,255,0.55);
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.45),
+        0 0 40px rgba(184,77,255,0.15);
 }
 
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.05);}
-    100%{transform:scale(1);}
+/* Product Top */
+.product-top {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.windows-icon {
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    box-shadow: 0 0 25px rgba(37,99,235,0.3);
+}
+
+.product-title h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.product-title span {
+    color: #a78bfa;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 13px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    background: rgba(184,77,255,0.12);
+    border: 1px solid rgba(184,77,255,0.35);
+    color: #d8b4fe;
+}
+
+/* Description */
+.description {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    padding: 13px 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.07);
+
+    color: #d1d5db;
+    font-size: 13px;
+}
+
+.feature strong {
+    color: #fff;
+}
+
+/* Download */
+.download-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(90deg, #b84dff, #7c3aed);
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-shadow: 0 10px 30px rgba(184,77,255,0.22);
+    transition: 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(184,77,255,0.4);
+}
+
+.download-note {
+    text-align: center;
+    margin-top: 12px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 35px;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    color: #d1d5db;
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #fff;
+    border-color: #b84dff;
+    background: rgba(184,77,255,0.1);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .product-card {
+        padding: 22px;
+    }
+
+    .product-top {
+        align-items: flex-start;
+    }
+
+    .windows-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 35px;
+    }
+
+    .product-title h2 {
+        font-size: 21px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -76,16 +269,92 @@ p{
 
 <div class="container">
 
-<div class="store-icon">🛒</div>
+    <div class="store-icon">🛒</div>
 
-<h1>COMING SOON</h1>
+    <h1>Lapcorex Store</h1>
 
-<p>
-Our Digital Store is currently under development.<br>
-We're working hard to bring you premium digital products and exclusive downloads.
-</p>
+    <p class="subtitle">
+        Premium digital downloads from Lapcorex
+    </p>
 
-<a href="index.html" class="btn">← Back to Home</a>
+
+    <!-- Windows Product -->
+
+    <div class="product-card">
+
+        <div class="product-top">
+
+            <div class="windows-icon">
+                🪟
+            </div>
+
+            <div class="product-title">
+
+                <h2>Windows 10 Pro 22H2</h2>
+
+                <span>64-BIT • x64</span>
+
+                <div class="badge">
+                    WINDOWS 10 PRO ONLY
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="description">
+            Windows 10 Pro 22H2 x64 installation ISO containing
+            <strong>Windows 10 Pro edition only</strong>.
+            Designed for clean Windows installation on compatible PCs and laptops.
+        </p>
+
+
+        <div class="features">
+
+            <div class="feature">
+                🪟 <strong>Edition:</strong> Windows 10 Pro
+            </div>
+
+            <div class="feature">
+                ⚙️ <strong>Architecture:</strong> 64-bit x64
+            </div>
+
+            <div class="feature">
+                📦 <strong>Format:</strong> ISO Archive
+            </div>
+
+            <div class="feature">
+                🔐 <strong>Protection:</strong> Password Protected
+            </div>
+
+            <div class="feature">
+                💾 <strong>Size:</strong> Approx. 5 GB
+            </div>
+
+            <div class="feature">
+                📀 <strong>Version:</strong> 22H2
+            </div>
+
+        </div>
+
+
+        <!-- Replace # with Google Drive link later -->
+
+        <a href="#" class="download-btn">
+            ⬇️ Download Windows 10 Pro
+        </a>
+
+        <div class="download-note">
+            Password required to extract the downloaded archive.
+        </div>
+
+    </div>
+
+
+    <a href="index.html" class="back-btn">
+        ← Back to Home
+    </a>
 
 </div>
 
